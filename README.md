@@ -3,7 +3,7 @@
 
 > NOTE: This is not a professional project. It is only for learning purposes.
 
-## Instalation
+## Installation
 
 To install the project, there are the following ways to do it:
 
