@@ -5,14 +5,15 @@
 
 ## Instalation
 
-To install the project there are the next ways to do it:
+To install the project, there are the following ways to do it:
+
 1. git clone --single-branch --branch master https://github.com/JoseNoriegaa/go-crud.git $GOPATH/src/github.com/josenoriegaa/go-crud
 2. go get github.com/JoseNoriegaa/go-crud
 
 # Setup
 1. ```cd $GOPATH/src/github.com/josenoriegaa/go-crud```
 3. Create a `.env` file into the project directory and set the `DB_CONNECTION_STRING` variable.
-4. Run the next commands to install the dependencies:
+4. Run the following commands to install the dependencies:
 
 
 ```terminal
