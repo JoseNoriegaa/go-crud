@@ -22,6 +22,7 @@ import (
 
 // Delete Delete an student record
 func Delete(db *gorm.DB) {
+	tx := db.Begin()
 	s := spinner.New(spinner.CharSets[9], 100*time.Millisecond)
 	var student structs.Student
 	var title = "Delete student"
@@ -58,7 +59,7 @@ func Delete(db *gorm.DB) {
 		}
 		s.Suffix = ": Loading"
 		s.Start()
-		db.Where("id = ?", id).First(&student)
+		tx.Where("id = ?", id).First(&student)
 		s.Stop()
 		if (structs.Student{}) == student {
 			flag = false
@@ -76,9 +77,11 @@ func Delete(db *gorm.DB) {
 	if option == "y" {
 		s.Start()
 		time.Sleep(time.Second)
-		db.Delete(&student)
+		tx.Delete(&student)
 		s.Stop()
+		tx.Commit()
 	} else {
 		fmt.Println("Changes has been discarted")
+		tx.Rollback()
 	}
 }
