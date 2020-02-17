@@ -38,11 +38,11 @@ func Menu() int {
 		fmt.Println(" [4] Update a student")
 		fmt.Println(" [5] Delete a student")
 		fmt.Println(" [6] Exit")
-		fmt.Print("Select an option by typing its related number (Num + Enter)> ")
 		// Warning user message
 		if showError {
-			fmt.Println("Error: You must choose a option between 1 and 4")
+			fmt.Println("Error: You must choose an option between 1 and 4")
 		}
+		fmt.Print("Select an option by typing its related number (Num + Enter)> ")
 		// Get input
 		option, _ = reader.ReadString('\n')
 		option = strings.TrimSpace(option)
