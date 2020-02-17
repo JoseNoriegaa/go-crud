@@ -31,7 +31,7 @@ func main() {
 	db.AutoMigrate(&structs.Student{})
 
 	option := -1
-	for option != 5 {
+	for option != 6 {
 		option = cli.Menu()
 		switch option {
 		case 1:
