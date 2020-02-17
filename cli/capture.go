@@ -21,6 +21,7 @@ import (
 
 // CaptureStudent Shows an interface to register a new student
 func CaptureStudent(db *gorm.DB) {
+	tx := db.Begin()
 	var title = "Student Registration Form"
 	reader := bufio.NewReader(os.Stdin)
 	x, _ := terminal.Width()
@@ -87,9 +88,11 @@ func CaptureStudent(db *gorm.DB) {
 			FirstName: firstName,
 			LastName:  lastName,
 		}
-		db.Create(&student)
+		tx.Create(&student)
 		s.Stop()
+		tx.Commit()
 	} else {
 		fmt.Println("Changes has been discarted")
+		tx.Rollback()
 	}
 }
