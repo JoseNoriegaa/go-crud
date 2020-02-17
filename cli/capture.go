@@ -1,7 +1,7 @@
 package cli
 
 // Author: Jose Noriega
-// email: josenoriega723
+// email: josenoriega723@gmail.com
 // Last Update: 2020-02-16
 
 import (
