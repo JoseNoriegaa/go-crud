@@ -1,7 +1,7 @@
 
 # SIMPLE GO CLI-CRUD
 
-> NOTE: This is not a professional project. It is only for learning purposes.
+> NOTE: This is not a professional project. It is just for learning purposes.
 
 ## Installation
 
@@ -17,7 +17,7 @@ To install the project, there are the following ways to do it:
 
 
 ```terminal
-$ go get http://github.com/jinzhu/gorm
+$ go get github.com/jinzhu/gorm
 $ go get github.com/jinzhu/gorm/dialects/mysql
 $ go get github.com/joho/godotenv
 $ go get github.com/briandowns/spinner
